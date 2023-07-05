@@ -1,9 +1,11 @@
 import streamlit as st
+import nltk
 import plotly.express as px
 import helper
 import preprosser
 from nltk.corpus import stopwords
 
+nltk.download("stopwords")
 excl = stopwords.words("hinglish")
 st.sidebar.title("Whatsapp CHAT Analyzer")
 uploaded_file = st.sidebar.file_uploader("Choose a file")
