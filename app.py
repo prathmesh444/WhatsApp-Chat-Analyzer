@@ -1,9 +1,10 @@
+import nltk
 import streamlit as st
 import plotly.express as px
 import helper
 import preprosser
 from nltk.corpus import stopwords
-
+nltk.download('stopwords')
 excl = stopwords.words("hinglish")
 st.sidebar.title("Whatsapp CHAT Analyzer")
 uploaded_file = st.sidebar.file_uploader("Choose a file")
@@ -85,7 +86,7 @@ if uploaded_file is not None:
             st.plotly_chart(fig6, use_container_width=True)
         with col4:
             st.title("Most Buzy Month")
-            fig7 = px.bar(month, x="message", y="timeline", color="timeline", orientation='h')
+            fig7 = px.bar(month, x="message", y="month", color="month", orientation='h')
             st.plotly_chart(fig7, use_container_width=True)
 
         # Word Cloud code

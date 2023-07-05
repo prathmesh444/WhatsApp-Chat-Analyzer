@@ -127,8 +127,8 @@ def activity_map(df, curr_user):
     month_list = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     m = df.groupby('month').count()['message'].reset_index()
     w = df.groupby('day').count()['message'].reset_index()
-    m.month = pd.Categorical("month", month_list)
-    w.day = pd.Categorical("day", week_list)
+    m.month = pd.Categorical(m["month"], categories=month_list, ordered=True)
+    w.day = pd.Categorical(w["day"], categories=week_list,  ordered=True)
     m = m.sort_values('month')
     w = w.sort_values('day')
     return m, w
