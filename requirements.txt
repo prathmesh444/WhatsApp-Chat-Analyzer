@@ -1,0 +1,8 @@
+streamlit
+plotly
+nltk
+pandas
+emoji
+django-emoji
+urlextract
+wordcloud
