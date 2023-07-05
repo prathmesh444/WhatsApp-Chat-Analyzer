@@ -123,12 +123,11 @@ def hour_timeline(df, curr_user):
 def activity_map(df, curr_user):
     if curr_user != "Overall":
         df = df[df.user == curr_user]
-    week_list = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    month_list = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    week_dict = {"Monday":1, "Tuesday":2, "Wednesday":3, "Thursday":4, "Friday":5, "Saturday":6, "Sunday":7}
+    month_dict = {'January':1, 'February':2, 'March':3, 'April':4, 'May':5, 'June':6, 'July':7, 'August':8,
+                  'September':9, 'October':10, 'November':11, 'December':12}
     m = df.groupby('month').count()['message'].reset_index()
     w = df.groupby('day').count()['message'].reset_index()
-    m.month = pd.Categorical(m["month"], categories=month_list, ordered=True)
-    w.day = pd.Categorical(w["day"], categories=week_list,  ordered=True)
-    m = m.sort_values('month')
-    w = w.sort_values('day')
+    m= m.sort_values('month', key = lambda x : x.apply (lambda x : month_dict[x]))
+    w = w.sort_values('day', key = lambda x : x.apply (lambda x : week_dict[x]))
     return m, w
