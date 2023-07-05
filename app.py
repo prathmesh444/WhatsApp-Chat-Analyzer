@@ -85,7 +85,7 @@ if uploaded_file is not None:
             st.plotly_chart(fig6, use_container_width=True)
         with col4:
             st.title("Most Buzy Month")
-            fig7 = px.bar(month, x="message", y="timeline", color="timeline", orientation='h')
+            fig7 = px.bar(month, x="message", y="month", color="month", orientation='h')
             st.plotly_chart(fig7, use_container_width=True)
 
         # Word Cloud code
