@@ -18,6 +18,7 @@
   <img src="https://github.com/prathmesh444/WhatsApp-Chat-Analyzer/assets/84755719/c22ebed8-2f8b-443f-aa8a-4b8b3b2a77b9" alt="1" width="280" height = 400/>
 </div>
 
+---
 
 2) Go to [WhatsApp Chat Analyzer](https://prathmesh444-whatsapp-chat-analyzer-app-e5qwkm.streamlit.app/) and Open side-bar and upload your file.
  Click on "Show Stats" and wait for 2 min.
