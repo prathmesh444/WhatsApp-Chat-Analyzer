@@ -1,6 +1,6 @@
 # WhatsApp Chat Analyzer
 
-**Version 1** App Link-> https://prathmesh444-whatsapp-chat-analyzer-app-e5qwkm.streamlit.app/
+**Version 1** App Link-> [https://prathmesh444-whatsapp-chat-analyzer-app-e5qwkm.streamlit.app/](https://prathmesh444-whatsapp-chat-analyzer-app-e5qwkm.streamlit.app/)
 
 The Chat Relationship Analyzer is a web application that utilizes text preprocessing and exploratory data analysis to uncover intriguing insights and relationship patterns between two or more individuals. Whether you're curious about the dynamics of a WhatsApp group chat or want to explore the interactions between friends, this web app provides a real-time analysis of the conversations. 💬🔍📊
 
